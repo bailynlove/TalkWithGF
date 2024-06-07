@@ -150,10 +150,13 @@ def _launch_demo(args, model, tokenizer, config):
         return _chatbot
 
     with gr.Blocks(theme=gr.themes.Soft()) as demo:
-        gr.Markdown("""<center><font size=8>女友聊天模拟器</center>""")
+        gr.Markdown("""<center><font size=8>和女朋友聊天</center>""")
         gr.Markdown(
             """\
-<center><font size=3>本网站将模拟你的女朋友回答你的消息</center>""")
+<center><font size=3>本网站将模拟你的女朋友回答你的消息。</center>""")
+        gr.Markdown(
+            """\
+<center><font size=2>声明：训练数据参考自小红书。本网站仅供学习参考，并无冒犯与不尊重女性之意。同时希望各位能与自己的身边人保持相互理解和沟通！</center>""")
 
         query = gr.Textbox(lines=2, label='你想说:')
         task_history = gr.State([])
