@@ -116,6 +116,14 @@ def _gc():
 
 
 def _launch_demo(args, model, tokenizer, config):
+    """
+    页面主方法
+    :param args:
+    :param model:
+    :param tokenizer:
+    :param config:
+    :return:
+    """
 
     def predict(_query, _chatbot, _task_history):
         print(f"User: {_parse_text(_query)}")
