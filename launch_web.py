@@ -16,7 +16,7 @@ from transformers import AutoModelForCausalLM, AutoTokenizer
 from transformers.generation import GenerationConfig
 
 
-DEFAULT_CKPT_PATH = './model/'
+DEFAULT_CKPT_PATH = './model/' # base model path 
 
 
 def _get_args():
@@ -49,7 +49,7 @@ def _load_model_tokenizer(args):
         device_map = "auto"
 
     model = AutoModelForCausalLM.from_pretrained(
-        args.checkpoint_path,
+        args.checkpoint_path, # please replace whit the path of folder "output_qwen"  
         device_map=device_map,
         trust_remote_code=True,
         resume_download=True,
